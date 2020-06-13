@@ -4,16 +4,16 @@
 const express 				= require("express");
 const app 					= express();
 const bodyParser			= require("body-parser");
-const mongoose        		= require("mongoose");
+const mongoose				= require("mongoose");
 const Campground			= require("./models/campgroundSchema.js");
 const Comment 				= require("./models/commentSchema.js");
-const methodOverride	    = require("method-override");
-const passport			    = require("passport");
-const localStrategy         = require("passport-local");
+const methodOverride		= require("method-override");
+const passport				= require("passport");
+const localStrategy			= require("passport-local");
 const passportLocalMongoose = require("passport-local-mongoose");
-const expressSession 		= require("express-session");
+const expressSession		= require("express-session");
 const User 					= require("./models/users.js");
-const flash                 = require('connect-flash');
+const flash					= require('connect-flash');
 
 
 // =============================
