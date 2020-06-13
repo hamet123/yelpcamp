@@ -1,0 +1,16 @@
+<%- include("partials/header") %>
+<link rel="stylesheet" href="/css/updateComment.css">
+<%- include("partials/header2") %>
+
+<div class="container-box">
+	<h3 class="text-center mb-5">Edit Your Comment</h3>
+<form action="/campgrounds/<%= campground._id %>/comment/<%= comment._id %>?_method=PUT" method="POST">
+	<textarea name="comment[text]"><%= comment.text %></textarea>
+	<input type="submit" value="Edit" class="btn btn-secondary btn-lg">
+	
+</form>
+
+</div>
+
+
+<%- include("partials/footer") %>

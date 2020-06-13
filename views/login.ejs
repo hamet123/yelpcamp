@@ -1,0 +1,25 @@
+<%- include("partials/header") %>
+<link rel="stylesheet" href="/css/loginform.css">
+<%- include("partials/header2") %>
+
+<div class="container-box gradient-border" id="box">
+	<br>
+	<br>
+	<h4>
+		Login below with <br> your credentials !!!
+</h4>
+
+<form action="/login" method="POST">
+	<label for="username">Enter your Username :</label><br>
+	<input type="text" placeholder="Enter your Username" name="username" id="username" required>
+	<br> 
+	<br>
+	<label for="password">Enter your Password :</label><br>
+	<input type="password" placeholder="Enter your password" name="password" id="password" required>
+	<br>
+	<br>
+	<input type="submit" value="Login" class="btn btn-lg btn-outline-success">
+</form>
+</div>
+
+<%- include("partials/footer") %>

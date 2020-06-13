@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:200');
+@import url('https://fonts.googleapis.com/css?family=Roboto:800');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400');
+
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+	font-family:Roboto;
+	
+}
+
+
+/* ========================================
+			Animations
+======================================== */
+
+.animated {
+            -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+         }
+         
+         @-webkit-keyframes fadeIn {
+            0% {opacity: 0;}
+            100% {opacity: 1;}
+         }
+         
+         @keyframes fadeIn {
+            0% {opacity: 0;}
+            100% {opacity: 1;}
+         }
+
+		 @-webkit-keyframes fadeOut {
+            100% {opacity: 1;}
+            0% {opacity: 0;}
+         }
+         
+         @keyframes fadeOut {
+            100% {opacity: 1;}
+            0% {opacity: 0;}
+         }
+         
+         .fadeIn {
+            -webkit-animation-name: fadeIn;
+            animation-name: fadeIn;
+         }
+     
+		.fadeOut {
+			-webkit-animation-name: fadeOut;
+            animation-name: fadeOut;
+		}
+
+
+.elementToFadeInAndOut {
+    -webkit-animation: fadeinout 5s linear forwards;
+    animation: fadeinout 5s linear forwards;
+}
+
+@-webkit-keyframes fadeinout {
+  0%,100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+@keyframes fadeinout {
+  0%,100% { opacity: 0; }
+  50% { opacity: 1; }
+}

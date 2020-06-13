@@ -1,0 +1,28 @@
+<%- include("partials/header") %>
+<link rel="stylesheet" href="/css/signupform.css">
+<%- include ("partials/header2") %>
+<div class="container-box gradient-border" id="box">
+	<br>
+	<br>
+<h4>
+	Sign-Up <br> for a  new account !!!
+</h4>
+
+<form action="/register" method="POST">
+	<label for="userName">Select your Username :</label>
+	<input type="text" name="username" placeholder="Type the userName" id="userName" required>
+	<br>
+	<br>
+	<label for="email">What's your email :</label>
+	<input type="email" name="email" placeholder="Type your E-mail" id="email" required>
+	<br>
+	<br>
+	<label for="password">Type a password :</label>
+	<input type="password" name="password" placeholder="Type your password" id="password" required>
+	<br>
+	<br>
+	<input type="submit" value="Register" class="btn btn-outline-info btn-lg">
+</form>
+</div>
+
+<%- include("partials/footer") %>

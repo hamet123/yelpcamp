@@ -1,0 +1,25 @@
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+}
+
+.container-box {
+	width:600px;
+	margin:150px auto;
+}
+
+textarea {
+	display:block;
+	width:100%;
+	margin: 20px 0;
+	text-indent:20px;
+	padding:5px;
+	min-height:100px;
+}
+
+input[type=submit]{
+	width:100%;
+	margin:20px 0;
+	min-height:40px;
+}

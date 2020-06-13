@@ -1,0 +1,23 @@
+<%- include ("partials/header") %>
+<%- include ("partials/header2") %>
+
+<div class="mx-auto" style="width:600px">
+	<h1 class="text-center pt-5 mb-5">Create a new CampGround !!!!</h1>
+	<form action="/campgrounds" method="POST" class="">
+		<input type="text" placeholder="Enter the name of the campground" name="name" style="width:100%; border-radius:5px; outline:none; border: 2px solid steelblue" class="d-block my-3 mx-auto text-center p-2">
+		<input type="text" placeholder="Enter the URL of the campground"  name="image" style="width:100%; border-radius:5px; outline:none; border: 2px solid steelblue" class="d-block my-3 mx-auto text-center p-2">
+		<input type="number" min="0.01" step="0.01" placeholder="Price" name="price" style="width:100%; border-radius:5px; outline:none; border: 2px solid steelblue" class="d-block my-3 mx-auto text-center p-2">
+		
+		<input type="text" placeholder="Enter the description of the campground"  name="description" style="width:100%; border-radius:5px; outline:none; border: 2px solid steelblue" class="d-block my-3 mx-auto text-center p-2">
+		<div class="text-center" style="width:100%">
+			<input type="submit" class="btn btn-primary" class="d-inline-blocks">
+			<a class="btn btn-success" href="/campgrounds">Go Back</a>
+		</div>
+		
+		
+		
+	</form>
+</div>
+
+<%- include ("partials/header") %>
+

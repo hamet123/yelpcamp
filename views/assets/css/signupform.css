@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:200');
+@import url('https://fonts.googleapis.com/css?family=Raleway:800');
+@import url('https://fonts.googleapis.com/css?family=Raleway:400');
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+	font-family:Raleway;
+	
+}
+
+.container-box {
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:100px;
+	text-align:center;
+	height : 500px;
+	width: 400px;
+	-webkit-box-shadow: 10px 10px 33px -10px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 33px -10px rgba(0,0,0,0.75);
+box-shadow: 10px 10px 33px -10px rgba(0,0,0,0.75);
+	
+}
+
+h4 {
+	
+	margin-bottom: 30px;
+	width:100%;
+	
+}
+
+input{
+	width:80%;
+	border-radius:10px;
+	
+}
+
+input[type=text], input[type=password], input[type=email]{
+	text-indent:20px;
+	border: 1px solid rgba(0,0,0,0.5);
+	
+	
+}
+
+
+
+
+label{
+	font-weight:800;
+	
+	
+}
+input[type=text]:focus, input[type=password]:focus, input[type=email]:focus {
+	outline:none;
+	border: 2px solid rgb(91, 192, 222);
+	border-radius:10px;
+	-webkit-box-shadow: 10px 10px 33px -10px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 33px -10px rgba(0,0,0,0.75);
+box-shadow: 10px 10px 33px -10px rgba(0,0,0,0.75);
+	
+	
+}
+
+input[type=text]::placehodler {
+	color:teal;
+}
+input[type=submit] {
+	margin-top:20px;
+}
+
+
+// gradient border
+
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:200');
+
+
+#box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  height: 200px;
+  color: white;
+  font-family: 'Raleway';
+  font-size: 2.5rem;
+}
+.gradient-border {
+  --borderWidth: 3px;
+  background: white;
+  position: relative;
+  border-radius: var(--borderWidth);
+}
+.gradient-border:after {
+  content: '';
+  position: absolute;
+  top: calc(-1 * var(--borderWidth));
+  left: calc(-1 * var(--borderWidth));
+  height: calc(100% + var(--borderWidth) * 2);
+  width: calc(100% + var(--borderWidth) * 7);
+  background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+  border-radius: calc(2 * var(--borderWidth));
+  z-index: -1;
+  animation: animatedgradient 3s ease alternate infinite;
+  background-size: 300% 300%;
+}
+
+
+@keyframes animatedgradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+

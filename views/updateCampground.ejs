@@ -1,0 +1,22 @@
+<%- include ("partials/header") %>
+<link rel="stylesheet" href="/css/updateCampground.css">
+<%- include ("partials/header2") %>
+
+<div class="mx-auto" style="width:600px">
+	<h1 class="text-center pt-5 mb-5">Edit <%= campground.name %></h1>
+	<form action="/campgrounds/<%=campground._id%>?_method=PUT" method="POST" class="">
+		<input type="text" placeholder="Enter the name of the campground" name="campground[name]" style="width:80%; border-radius:5px; outline:none; border: 2px solid steelblue" class="d-block my-3 mx-auto text-center p-2" value="<%=campground.name%>">
+		<input type="text" placeholder="Enter the URL of the campground"  name="campground[image]" style="width:80%; border-radius:5px; outline:none; border: 2px solid steelblue" class="d-block my-3 mx-auto text-center p-2" value="<%=campground.image%>">
+		<textarea style="width:100%; border-radius:5px; outline:none; border: 2px solid steelblue; min-height:100px;" name="campground[description]"><%=campground.description%></textarea>
+		<div class="text-center" style="width:100%">
+			<input type="submit" class="btn btn-primary" class="d-inline-blocks" value="Edit">
+			<a class="btn btn-success" href="/campgrounds">Go Back</a>
+		</div>
+		
+		
+		
+	</form>
+</div>
+
+<%- include ("partials/header") %>
+
