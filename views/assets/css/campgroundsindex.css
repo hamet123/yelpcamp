@@ -1,0 +1,22 @@
+.headsection {
+	background-image: url(https://www.michigan.org/sites/default/files/styles/15_6_desktop/public/camping-hero_0_0.jpg?itok=mgGs0-vw&timestamp=1520373602);
+
+	color:white;
+	height:400px;
+	background-size:cover;
+}
+
+.headsection a{
+	background-color:rgba(255,69,0,0.9);
+	border:none;
+	color:white;
+	margin-top:100px;
+}
+
+.headsection h1 {
+	text-shadow: 4px 4px 2px rgba(150, 150, 150, 1);
+}
+
+.headsection a:hover{
+	color:white;
+}
