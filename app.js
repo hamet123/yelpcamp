@@ -2,18 +2,18 @@
 // 	Requiring Packages
 // =============================
 const express 				= require("express");
-const app 				= express();
+const app 					= express();
 const bodyParser			= require("body-parser");
 const mongoose				= require("mongoose");
 const Campground			= require("./models/campgroundSchema.js");
 const Comment 				= require("./models/commentSchema.js");
-const methodOverride			= require("method-override");
+const methodOverride		= require("method-override");
 const passport				= require("passport");
 const localStrategy			= require("passport-local");
-const passportLocalMongoose 		= require("passport-local-mongoose");
-const expressSession			= require("express-session");
-const User 				= require("./models/users.js");
-const flash				= require('connect-flash');
+const passportLocalMongoose = require("passport-local-mongoose");
+const expressSession		= require("express-session");
+const User 					= require("./models/users.js");
+const flash					= require('connect-flash');
 
 
 // =============================
@@ -75,6 +75,6 @@ app.use(indexRoutes);
 // 	Listening to the Port
 // =============================
 
-app.listen(process.env.PORT || 2000,process.env.IP,()=> {
+app.listen(3000,()=> {
 	console.log("Server started successfully");
 });

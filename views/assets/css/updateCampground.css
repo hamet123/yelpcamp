@@ -1,0 +1,51 @@
+body{
+	background-image: url(https://farm9.staticflickr.com/8605/16573646931_22fc928bf9_o.jpg);
+	background-size:cover;
+	background-repeat:no-repeat;
+}
+ 
+.main-box {
+	width:600px;
+	background-color: rgba(0,0,0,0.8);
+	color:white;
+	margin: 0 auto;
+	margin-top:150px;
+}
+
+input[type="text"] {
+	display:block;
+	width:80%;
+	margin: 10px auto;
+	height:30px;
+	text-indent:10px;
+	border-radius:10px;
+}
+
+textarea {
+	padding-left:10px;
+	width:80%;
+	border-radius:10px;
+	min-height:100px;
+}
+
+#main-buttons {
+	margin: 10px auto;
+	padding-bottom:20px;
+}
+
+.textarea-container {
+	margin-left:60px;
+	width:100%;
+}
+
+input:focus {
+	border-radius:10px;
+	border: 3px solid teal;
+	outline:none;
+}
+
+textarea:focus {
+	outline:none;
+	border: 3px solid teal;
+	border-radius:10px;
+}
