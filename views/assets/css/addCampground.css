@@ -1,8 +1,8 @@
 body{
-	background-image: url(https://wallpaperaccess.com/full/5825.jpg);
-  background-position: center;
+	background-image: url(https://wallpaperaccess.com/full/181060.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position:center;
 }
  
 .main-box {
@@ -13,19 +13,10 @@ body{
 	margin-top:150px;
 }
 
-input[type="text"]{
+input[type="text"], input[type="number"] {
 	display:block;
 	width:80%;
 	margin: 10px auto;
-	height:30px;
-	text-indent:10px;
-	border-radius:10px;
-}
-
-input[type="number"] {
-	width:80%;
-	margin: 0 auto;
-	margin-bottom:10px;
 	height:30px;
 	text-indent:10px;
 	border-radius:10px;
@@ -41,6 +32,10 @@ textarea {
 #main-buttons {
 	margin: 10px auto;
 	padding-bottom:20px;
+}
+
+#inside-buttons {
+	margin-left:auto;
 }
 
 .textarea-container {

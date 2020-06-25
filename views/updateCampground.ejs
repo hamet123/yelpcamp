@@ -8,11 +8,12 @@
 		<input type="text" placeholder="Enter the name of the campground" name="campground[name]"  value="<%=campground.name%>">
 		<input type="text" placeholder="Enter the URL of the campground"  name="campground[image]"  value="<%=campground.image%>">
 		<div class="textarea-container">
+		<input type="number" value="<%=campground.price%>" step="0.01" name="campground[price]" placeholder="Enter price of Campground">
 			<textarea name="campground[description]"><%=campground.description%></textarea>
 		</div>
 		
 		<div id="main-buttons" class="text-center">
-			<input type="submit" class="btn btn-primary" class="d-inline-blocks" value="Edit">
+			<input type="submit" class="btn btn-primary" class="d-inline-blocks" value="Save">
 			<a class="btn btn-success" href="/campgrounds">Go Back</a>
 		</div>
 		
