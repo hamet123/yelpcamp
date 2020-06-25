@@ -32,6 +32,13 @@ app.use(expressSession({
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(flash());
+app.use((req,res,next)=>{
+	res.locals.currentUser = req.user;
+	res.locals.specialErrors = req.flash("specialErrors");
+	res.locals.success = req.flash("success");
+	res.locals.error = req.flash("error");
+	next();
+});
 
 
 // ========================================
@@ -48,13 +55,7 @@ mongoose.connect("mongodb://localhost:27017/yelpCamp_v2", {useNewUrlParser: true
 passport.use(new localStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
-app.use((req,res,next)=>{
-	res.locals.currentUser = req.user;
-	res.locals.specialErrors = req.flash("specialErrors");
-	res.locals.success = req.flash("success");
-	res.locals.error = req.flash("error");
-	next();
-});
+
 
 
 // =============================
