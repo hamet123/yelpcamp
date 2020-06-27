@@ -84,6 +84,6 @@ app.use(indexRoutes);
 // 	Listening to the Port
 // =============================
 
-app.listen(5000,()=> {
+app.listen(process.env.PORT, process.env.IP,()=> {
 	console.log("Server started successfully");
 });
