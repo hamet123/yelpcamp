@@ -45,20 +45,20 @@ app.use((req,res,next)=>{
 // 	Configuring Mongoose and Passport
 // ========================================
 
-mongoose.connect("mongodb://localhost:27017/yelpCamp_v2" || process.env.DATABASEURL, {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false, useCreateIndex: true
-}).then(()=>{
-	console.log("Connected to Database");
-}).catch((err)=>{
-	console.log("err"+err.message);
-})
-
-
-// mongoose.connect(process.env.DATABASEURL , {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false, useCreateIndex: true
+// mongoose.connect("mongodb://localhost:27017/yelpCamp_v2" || process.env.DATABASEURL, {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false, useCreateIndex: true
 // }).then(()=>{
 // 	console.log("Connected to Database");
 // }).catch((err)=>{
 // 	console.log("err"+err.message);
 // })
+
+
+mongoose.connect(process.env.DATABASEURL , {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false, useCreateIndex: true
+}).then(()=>{
+	console.log("Connected to Database");
+}).catch((err)=>{
+	console.log("err"+err.message);
+})
 
 passport.use(new localStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
