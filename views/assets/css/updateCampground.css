@@ -11,6 +11,7 @@ body{
 	color:white;
 	margin: 0 auto;
 	margin-top:150px;
+	border-radius:15px;
 }
 
 input[type="text"]{
