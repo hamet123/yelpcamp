@@ -53,7 +53,7 @@ app.use((req,res,next)=>{
 // })
 
 
-mongoose.connect("mongodb+srv://hamet123:Ayush1994*@cluster0-rk6dd.mongodb.net/<dbname>?retryWrites=true&w=majority", {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false, useCreateIndex: true
+mongoose.connect(process.env.DATABASEURL, {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false, useCreateIndex: true
 }).then(()=>{
 	console.log("Connected to Database");
 }).catch((err)=>{
