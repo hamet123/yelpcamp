@@ -45,7 +45,15 @@ app.use((req,res,next)=>{
 // 	Configuring Mongoose and Passport
 // ========================================
 
-mongoose.connect("mongodb://localhost:27017/yelpCamp_v2", {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false, useCreateIndex: true
+// mongoose.connect("mongodb://localhost:27017/yelpCamp_v2", {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false, useCreateIndex: true
+// }).then(()=>{
+// 	console.log("Connected to Database");
+// }).catch((err)=>{
+// 	console.log("err"+err.message);
+// })
+
+
+mongoose.connect("mongodb+srv://hamet123:Ayush1994*@cluster0-rk6dd.mongodb.net/<dbname>?retryWrites=true&w=majority", {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false, useCreateIndex: true
 }).then(()=>{
 	console.log("Connected to Database");
 }).catch((err)=>{
