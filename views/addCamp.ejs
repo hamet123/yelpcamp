@@ -5,11 +5,17 @@
 <div class="main-box">
 	<h1 class="pt-5 mb-5 text-center">Create a new CampGround !!!!</h1>
 	<form action="/campgrounds" method="POST" class="">
-		<input type="text" placeholder="Enter the name of the campground" name="name" class="d-block my-3 mx-auto p-2" required>
-		<input type="text" placeholder="Enter the URL of the campground"  name="image"  class="d-block my-3 mx-auto p-2" required>
-		<input type="number" min="0.01" step="0.01" placeholder="Price" name="price" class="d-block my-3 mx-auto  p-2" required>
+		<div class="textarea-container">
+			<label for="name">Title :</label>
+			<input type="text" placeholder="Enter the name of the campground" name="name" required id="name">
+			<label for="image">Image URL :</label>
+		<input type="text" placeholder="Enter the URL of the campground"  name="image"   required id"image">
+			<label for="price">Price :</label>
+		<input type="number" min="0.01" step="0.01" placeholder="Price" name="price"  required id="price">
+		<label for="description">Description :</label>
+		<textarea placeholder="Enter the description of the campground"  name="description"  required id="description"></textarea>
+		</div>
 		
-		<textarea placeholder="Enter the description of the campground"  name="description"  class="d-block my-3 mx-auto  " required></textarea>
 		<div id="main-buttons">
 			<div class="text-center">
 			<input type="submit" class="btn btn-primary" class="d-inline-blocks">

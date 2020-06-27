@@ -45,20 +45,20 @@ app.use((req,res,next)=>{
 // 	Configuring Mongoose and Passport
 // ========================================
 
-// mongoose.connect("mongodb://localhost:27017/yelpCamp_v2", {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false, useCreateIndex: true
-// }).then(()=>{
-// 	console.log("Connected to Database");
-// }).catch((err)=>{
-// 	console.log("err"+err.message);
-// })
-
-
-mongoose.connect(process.env.DATABASEURL, {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false, useCreateIndex: true
+mongoose.connect("mongodb://localhost:27017/yelpCamp_v2" || process.env.DATABASEURL, {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false, useCreateIndex: true
 }).then(()=>{
 	console.log("Connected to Database");
 }).catch((err)=>{
 	console.log("err"+err.message);
 })
+
+
+// mongoose.connect(process.env.DATABASEURL , {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false, useCreateIndex: true
+// }).then(()=>{
+// 	console.log("Connected to Database");
+// }).catch((err)=>{
+// 	console.log("err"+err.message);
+// })
 
 passport.use(new localStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
@@ -84,6 +84,6 @@ app.use(indexRoutes);
 // 	Listening to the Port
 // =============================
 
-app.listen(process.env.PORT, process.env.IP,()=> {
+app.listen(process.env.PORT || 5000 , process.env.IP,()=> {
 	console.log("Server started successfully");
 });
