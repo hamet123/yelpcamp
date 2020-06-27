@@ -5,11 +5,17 @@
 <div class="main-box">
 	<h1 class="text-center pt-5 mb-5">Edit <%= campground.name %></h1>
 	<form action="/campgrounds/<%=campground._id%>?_method=PUT" method="POST" class="">
-		<input type="text" placeholder="Enter the name of the campground" name="campground[name]"  value="<%=campground.name%>">
-		<input type="text" placeholder="Enter the URL of the campground"  name="campground[image]"  value="<%=campground.image%>">
+		
+		
 		<div class="textarea-container">
-		<input type="number" value="<%=campground.price%>" step="0.01" name="campground[price]" placeholder="Enter price of Campground">
-			<textarea name="campground[description]"><%=campground.description%></textarea>
+			<label for="name">Name :</label>
+		<input type="text" placeholder="Enter the name of the campground" name="campground[name]"  value="<%=campground.name%>" id="name">
+		<label for="image">Image URL :</label>
+		<input type="text" placeholder="Enter the URL of the campground"  name="campground[image]"  value="<%=campground.image%>" id="image">
+			<label for="price">Price :</label>
+		<input type="number" value="<%=campground.price%>" step="0.01" name="campground[price]" placeholder="Enter price of Campground" id="price">
+			<label for="description">Description :</label>
+			<textarea name="campground[description]" id="description"><%=campground.description%></textarea>
 		</div>
 		
 		<div id="main-buttons" class="text-center">

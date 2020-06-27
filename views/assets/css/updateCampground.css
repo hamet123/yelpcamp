@@ -17,10 +17,10 @@ body{
 input[type="text"]{
 	display:block;
 	width:80%;
-	margin: 10px auto;
 	height:30px;
 	text-indent:10px;
 	border-radius:10px;
+	margin-bottom:10px;
 }
 
 input[type="number"] {
@@ -59,4 +59,13 @@ textarea:focus {
 	outline:none;
 	border: 3px solid teal;
 	border-radius:10px;
+}
+
+label {
+	display:block;
+	width:80%;
+	margin: 10px auto;
+	margin-bottom:10px;
+	height:30px;
+	
 }
